@@ -145,13 +145,13 @@ Return the head of the merged linked list.
 Example:
 Input: list1 = [1,2,4], list2 = [1,3,4]
 Output: [1,1,2,3,4,4]
-""" 
+"""
 # # class ListNode:
 # #     def __init__(self, val=0, next=None):
 # #         self.val = val
 # #         self.next = next
 # class Solution:
-#     def mergeTwoLists( list1: ListNode, list2: ListNode) -> ListNode:    
+#     def mergeTwoLists( list1: ListNode, list2: ListNode) -> ListNode:
 #         if not list1: return list2
 #         if not list2: return list1
 #         dummylist = ListNode(0)
@@ -169,7 +169,7 @@ Output: [1,1,2,3,4,4]
 #         if list1:
 #             current.next = list1
 #         elif list2:
-#             current.next = list2 
+#             current.next = list2
 #         return dummylist.next
 
 #     print(mergeTwoLists( list1=[1,2,4], list2 = [1,3,4]))
@@ -235,7 +235,7 @@ Return k.
 #         r-=1
 #     print("k = ", str(k))
 #     return k
-    
+
 
 # print(removeElement(nums=[0,1,2,2,3,0,4,2], val=2))
 
@@ -320,17 +320,70 @@ Input: s = "luffy is still joyboy"
 Output: 6
 Explanation: The last word is "joyboy" with length 6.
 """
-def lengthOfLastWord(s: str) -> int:
-    # s = s.rstrip()  # Remove trailing spaces
-    # if ' ' not in s:  # No spaces, return the length of the string
-    #     return len(s)
-    # else:
-    #     last_word = s.split(' ')[-1]  # Split string by spaces and take the last word
-    #     return len(last_word)
-# optimal solution
-    s = s.split()
-    longestLastWord = len(s[-1])
-    return longestLastWord
+# def lengthOfLastWord(s: str) -> int:
+#     # s = s.rstrip()  # Remove trailing spaces
+#     # if ' ' not in s:  # No spaces, return the length of the string
+#     #     return len(s)
+#     # else:
+#     #     last_word = s.split(' ')[-1]  # Split string by spaces and take the last word
+#     #     return len(last_word)
+# # optimal solution
+#     s = s.split()
+#     longestLastWord = len(s[-1])
+#     return longestLastWord
 
 
-print(lengthOfLastWord(s= "a"))
+# print(lengthOfLastWord(s= "a"))
+
+#################################################################################################
+
+"""
+66. Plus One
+You are given a large integer represented as an integer array digits, 
+where each digits[i] is the ith digit of the integer. 
+The digits are ordered from most significant to least significant in left-to-right order. 
+The large integer does not contain any leading 0's.
+
+Increment the large integer by one and return the resulting array of digits.
+
+Example 1:
+Input: digits = [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+Incrementing by one gives 123 + 1 = 124.
+Thus, the result should be [1,2,4].
+
+Example 2:
+Input: digits = [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
+Incrementing by one gives 4321 + 1 = 4322.
+Thus, the result should be [4,3,2,2].
+
+Example 3:
+Input: digits = [9]
+Output: [1,0]
+Explanation: The array represents the integer 9.
+Incrementing by one gives 9 + 1 = 10.
+Thus, the result should be [1,0].
+"""
+
+
+def plusOne(digits: list[int]) -> list[int]:
+    i = len(digits)-1
+    while i >= 0:
+        if digits[i] == 9:
+            digits[i] = 0
+            i -= 1
+            if len(digits) == 1:
+                digits.insert(0, 1)
+                return digits
+        elif digits[i] != 9:
+            digits[i] += 1
+            return digits
+    return [1] + digits
+
+
+print(plusOne(digits=[4, 3, 2, 1]))
+
+#################################################################################################
