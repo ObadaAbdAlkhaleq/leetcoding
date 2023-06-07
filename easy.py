@@ -369,21 +369,65 @@ Thus, the result should be [1,0].
 """
 
 
-def plusOne(digits: list[int]) -> list[int]:
-    i = len(digits)-1
-    while i >= 0:
-        if digits[i] == 9:
-            digits[i] = 0
-            i -= 1
-            if len(digits) == 1:
-                digits.insert(0, 1)
-                return digits
-        elif digits[i] != 9:
-            digits[i] += 1
-            return digits
-    return [1] + digits
+# def plusOne(digits: list[int]) -> list[int]:
+#     i = len(digits)-1
+#     while i >= 0:
+#         if digits[i] == 9:
+#             digits[i] = 0
+#             i -= 1
+#             if len(digits) == 1:
+#                 digits.insert(0, 1)
+#                 return digits
+#         elif digits[i] != 9:
+#             digits[i] += 1
+#             return digits
+#     return [1] + digits
 
 
-print(plusOne(digits=[4, 3, 2, 1]))
+# print(plusOne(digits=[4, 3, 2, 1]))
 
 #################################################################################################
+
+"""
+67. Add Binary
+Given two binary strings a and b, return their sum as a binary string.
+
+Example 1:
+Input: a = "11", b = "1"
+Output: "100"
+
+Example 2:
+Input: a = "1010", b = "1011"
+Output: "10101"
+
+    1010
+        +
+    1011
+   =10101
+
+"""
+
+
+# def addBinary(a: str, b: str) -> str:
+#     a, b = a[::-1], b[::-1]
+#     carry = 0
+#     res = ''
+#     for num in range(len(a)):
+#         if a[num] == "1" and b[num] == "1":
+#             carry += 1
+#             res += "0"
+#         elif a[num] == "1" or b[num] == "1":
+#             res += str(carry ^ 1)
+#         else:
+#             res += str(carry)
+#             carry = 0
+#     if carry:
+#         res += '1'
+#     return res[::-1]
+
+
+# print(addBinary(a="11", b="1"))
+
+# NOTE: this hasnt been fully solved
+#################################################################################################
+
