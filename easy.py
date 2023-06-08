@@ -406,8 +406,6 @@ Output: "10101"
    =10101
 
 """
-
-
 # def addBinary(a: str, b: str) -> str:
 #     a, b = a[::-1], b[::-1]
 #     carry = 0
@@ -431,3 +429,50 @@ Output: "10101"
 # NOTE: this hasnt been fully solved
 #################################################################################################
 
+"""
+217. Contains Duplicate
+
+Given an integer array nums, return true if any value appears at least twice in the array,
+and return false if every element is distinct.
+
+Example 1:
+Input: nums = [1,2,3,1]
+Output: true
+
+Example 2:
+Input: nums = [1,2,3,4]
+Output: false
+
+Example 3:
+Input: nums = [1,1,1,3,3,4,3,2,4,2]
+Output: true
+"""
+
+
+# def containsDuplicate(nums: list[int]) -> bool:
+#     # if not nums or len(nums) == 1:
+#     #     return False
+#     # if nums[0] == nums[1]:
+#     #     return True
+#     # else:
+#     #     stack = []
+#     #     for i in range(1, len(nums)):
+#     #         r = nums[i]
+#     #         stack.append(nums[i-1])
+#     #         if nums[i] == r:
+#     #             r += 1
+#     #         if nums[i] in stack:
+#     #             return True
+#     #     return False
+#         # optimal solution, using set as sets dont allow duplicates so we check if nums
+#         seen = set()
+#         for num in nums:
+#             if num in seen:
+#                 return True
+#             seen.add(num)
+#         return False
+
+
+# print(containsDuplicate(nums=[0]))
+
+#################################################################################################
