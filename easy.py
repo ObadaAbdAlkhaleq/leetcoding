@@ -476,3 +476,56 @@ Output: true
 # print(containsDuplicate(nums=[0]))
 
 #################################################################################################
+
+"""
+242. Valid Anagram
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+typically using all the original letters exactly once.
+
+Example 1:
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+Input: s = "rat", t = "car"
+Output: false
+
+Constraints:
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+"""
+# def isAnagram(s: str, t: str) -> bool:
+# fastest solution
+# return True if sorted(s) == sorted(t) and len(s) == len(t) else False
+# s = sorted(s)
+# t = sorted(t)
+# better solution
+# if sorted(s) == sorted(t) and len(s) == len(t):
+#     return True
+# else:
+#     return False
+# this solution also works but isnt optimal
+# if len(s) != len(t):
+#     return False
+# slet = list(s)
+# slet = sorted(slet)
+# tlet = list(t)
+# tlet = sorted(tlet)
+# count = 0
+# for char in range(len(slet)):
+#     if slet[char] == tlet[char]:
+#         count += 1
+#         if count == len(slet):
+#             return True
+#     else:
+#         return False
+# return False
+
+# print(isAnagram(s="anagram", t="nagaram"))
+# print(isAnagram(s="anagram", t="anagrams"))
+# print(isAnagram(s="anagram", t="margana"))
+
+# NOTE: find the optimal solution based on characters frequency count
+#################################################################################################
