@@ -42,3 +42,37 @@ Output: [["a"]]
 # print(groupAnagrams(strs=["eat", "tea", "tan", "ate", "nat", "bat"]))
 
 #################################################################################################
+
+"""
+347. Top K Frequent Elements
+Given an integer array nums and an integer k, 
+return the k most frequent elements. You may return the answer in any order.
+
+Example 1:
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+
+Example 2:
+Input: nums = [1], k = 1
+Output: [1]
+"""
+# def topKFrequent(nums: list[int], k: int) -> list[int]:
+#     count = {}
+#     freq = [[] for i in range(len(nums)+1)]
+#     for num in nums:
+#         count[num] = 1+count.get(num, 0)
+#     for num, idx in count.items():
+#         freq[idx].append(num)
+#     res = []
+#     i = len(freq)-1
+#     while i > 0:
+#         for num in freq[i]:
+#             res.append(num)
+#             if len(res) == k:
+#                 return res
+#         i -= 1
+
+
+# print(topKFrequent(nums=[1, 1, 1, 2, 2, 4, 5, 5, 8, 8, 8, 8, 3, 7, 7, 7], k=2))
+
+#################################################################################################
