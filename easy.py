@@ -529,3 +529,57 @@ s and t consist of lowercase English letters.
 
 # NOTE: find the optimal solution based on characters frequency count
 #################################################################################################
+
+"""
+125. Valid Palindrome
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters 
+and removing all non-alphanumeric characters, it reads the same forward and backward. 
+Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+Example 2:
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+
+Example 3:
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+"""
+# def isPalindrome(s: str) -> bool:
+# straight forward solution
+    # string = ""
+    # for ch in s:
+    #     if ch.isalnum():
+    #         string += ch.lower()
+    # return string == string[::-1]
+# two pointer solution
+#     start,end = 0,len(s)-1
+#     while start < end:
+#         while start < end and not self.isan(s[start]):
+#             start+=1
+#         while start < end and not self.isan(s[end]):
+#             end-=1
+#         if s[start].lower() != s[end].lower():
+#             return False
+#         elif s[start].lower() == s[end].lower():
+#             start+=1
+#             end-=1
+#     return True
+
+# def isan(self,ch) -> bool:
+#     return (ord('A') <= ord(ch) <= ord('Z') or 
+#         ord('a') <= ord(ch) <= ord('z') or
+#         ord('0') <= ord(ch) <= ord('9'))
+
+# print(isPalindrome(s = "A man, a plan, a canal: Panama"))
+
+#################################################################################################
