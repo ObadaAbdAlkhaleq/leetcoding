@@ -114,7 +114,7 @@ Output: [0,0,9,0,0]
 # 		res[l] = pl
 # 		pl *= nums[l]
 # 	for r in range(len(nums)-1, -1, -1):
-# 		res[r] = pr
+# 		res[r] *= pr
 # 		pr *= nums[r]
 # 	return res
 
