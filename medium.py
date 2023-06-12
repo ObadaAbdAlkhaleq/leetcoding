@@ -201,3 +201,54 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 # print(twoSum(nums = [1,3,4,5,7,10,11], target = 9))
 
 #################################################################################################
+
+"""
+15. 3Sum
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
+such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Notice that the solution set must not contain duplicate triplets.
+
+Example 1:
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
+
+Example 2:
+Input: nums = [0,1,1]
+Output: []
+Explanation: The only possible triplet does not sum up to 0.
+
+Example 3:
+Input: nums = [0,0,0]
+Output: [[0,0,0]]
+Explanation: The only possible triplet sums up to 0.
+"""
+# def threeSum(nums: list[int]) -> list[list[int]]:
+#     nums = sorted(nums)
+#     res= []
+#     for i in range(len(nums)):
+#         j,k=i+1,len(nums)-1 
+#         if i > 0 and nums[i] == nums[i-1]:
+#             continue
+#         while j < k:
+#             threeSum = nums[i] + nums[j] + nums [k]
+#             if threeSum > 0:
+#                 k-=1
+#             elif threeSum< 0:
+#                 j+=1
+#             else:
+#                 res.append([nums[i],nums[j],nums[k]])
+#                 j+=1
+#                 while nums[j] == nums[j-1] and j < k:
+#                     j+=1
+#     return res
+
+# print(threeSum(nums = [-1,0,1,2,-1,-4]))
+
+#################################################################################################
