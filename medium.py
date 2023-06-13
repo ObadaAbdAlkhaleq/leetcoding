@@ -252,3 +252,45 @@ Explanation: The only possible triplet sums up to 0.
 # print(threeSum(nums = [-1,0,1,2,-1,-4]))
 
 #################################################################################################
+"""
+11. Container With Most Water
+You are given an integer array height of length n. 
+There are n vertical lines drawn 
+such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, 
+such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
+Example 1:
+https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. 
+In this case, the max area of water (blue section) the container can contain is 49.
+Example 2:
+Input: height = [1,1]
+Output: 1
+"""
+# O(n) solution | optimal 
+# area = height * width
+# width = the distance between the two elements
+# height = the lower bound of the two elements ex [5,6] the height would be 5 not 6
+# def maxArea( height: list[int]) -> int:
+# 	i, j = 0, len(height) - 1
+# 	area = 0
+# 	resArea = 0
+# 	while i < j:
+# 		area = (min(height[i], height[j])) * (j - i)
+# 		if height[i] < height[j]:
+# 			i+=1
+# 		else:
+# 			j -= 1
+# 		resArea = max(resArea, area)
+# 	return resArea
+
+# print(maxArea(height= [1,3,2,5,25,24,5]))
+
+#################################################################################################
